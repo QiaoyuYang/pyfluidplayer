@@ -1,0 +1,8 @@
+trombone: https://www.polyphone.io/en/soundfonts/brass/197-papelmedia-trombone-stac
+flute: https://www.polyphone.io/en/soundfonts/flutes/209-cams-flute
+oboe: https://www.polyphone.io/en/soundfonts/reeds/208-alto-oboe
+violin: https://www.polyphone.io/en/soundfonts/bowed-strings/185-violin
+violin ensemble: https://www.polyphone.io/en/soundfonts/bowed-strings/400-ensemble-pad-econo
+viola: https://www.polyphone.io/en/soundfonts/bowed-strings/270-all-around-violin
+double bass: https://www.polyphone.io/en/soundfonts/bowed-strings/620-doublebasssmolken
+cello: https://www.polyphone.io/en/soundfonts/bowed-strings/289-cello-solo

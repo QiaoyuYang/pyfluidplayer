@@ -2,6 +2,7 @@ import fluidsynth
 import numpy
 import pyaudio
 import wave
+import os
 import argparse
 
 CHANNELS = 2
@@ -10,7 +11,10 @@ FORMAT = pyaudio.paInt16
 out_len_in_s = 30
 
 def synthesize(instrument, part):
-    with wave.open(f'output_{part}.wav', 'wb') as wf:
+
+    os.makedirs("output", exist_ok=True)
+
+    with wave.open(f'output/{part}.wav', 'wb') as wf:
         
         wf.setnchannels(CHANNELS)
         wf.setsampwidth(pyaudio.get_sample_size(FORMAT))
@@ -19,8 +23,8 @@ def synthesize(instrument, part):
         fs = fluidsynth.Synth()
         fs.custom_router_callback = None
 
-        sfid_trombone = fs.sfload(f"soundfonts/{instrument}.sf2")
-        fs.program_select(0, sfid_trombone, 0, 0)
+        sfid = fs.sfload(f"soundfonts/{instrument}.sf2")
+        fs.program_select(0, sfid, 0, 0)
 
         fs.play_midi_file(f"bc_no2_mv1/bc_no2_mv1_{part}.mid")
 
